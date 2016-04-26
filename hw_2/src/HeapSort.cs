@@ -8,7 +8,7 @@ public static class HeapS
         {
             int temp = arr[0];
             arr[0] = arr[i];
-            arr[i] = arr[0];
+            arr[i] = temp;
             heapSize--;
             Heapify(arr, 0, heapSize);
         }
@@ -38,6 +38,7 @@ public static class HeapS
         {
             int temp = arr[i];
             arr[i] = arr[largest];
+            arr[largest] = temp;
             Heapify(arr, largest, heapSize);
         }
     }
