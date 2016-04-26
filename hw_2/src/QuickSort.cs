@@ -1,28 +1,28 @@
 public static class QS
 {
-    public static void QuickSort(int[] mas, int left, int right)
+    public static void QuickSort(int[] arr, int left, int right)
     {
         if(left < right)
         {
-            int q = Partition(mas, left, right);
-            QuickSort(mas, left, q - 1);
-            QuickSort(mas, q + 1, right);
+            int q = Partition(arr, left, right);
+            QuickSort(arr, left, q - 1);
+            QuickSort(arr, q + 1, right);
         }
     }
 
-    static int Partition(int[] mas, int left, int right)
+    static int Partition(int[] arr, int left, int right)
     {
         int temp;
-        int x = mas[right];
+        int x = arr[right];
         int i = left - 1;
         for (int j = left; j <= right - 1; j++)
         {
-            if (mas[j] <= x)
+            if (arr[j] <= x)
             {
                 i++;
-                temp = mas[j];
-                mas[j] = mas[i];
-                mas[i] = temp;
+                temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
             }
         }
         temp = mas[right];
