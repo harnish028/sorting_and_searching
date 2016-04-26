@@ -1,6 +1,6 @@
-publik stati cclass HeapS
+public static class HeapS
 {
-    static void HeapSort(int[] arr)
+    public static void HeapSort(int[] arr)
     {
         int heapSize = arr.Length - 1;
         BuildHeap(arr, heapSize);
